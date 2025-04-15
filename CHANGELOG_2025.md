@@ -5,3 +5,6 @@
 
 ### 2025-03-28 14:00:00
 - chore: initial unity project structure
+
+### 2025-04-15 14:00:00
+- feat: added architectural model loading logic
