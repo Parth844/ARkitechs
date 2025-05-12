@@ -8,3 +8,6 @@
 
 ### 2025-04-15 14:00:00
 - feat: added architectural model loading logic
+
+### 2025-05-12 14:00:00
+- research: lighting optimization for mobile AR
