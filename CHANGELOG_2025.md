@@ -11,3 +11,6 @@
 
 ### 2025-05-12 14:00:00
 - research: lighting optimization for mobile AR
+
+### 2025-06-01 14:00:00
+- feat: interactive UI elements in world space
