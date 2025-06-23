@@ -14,3 +14,6 @@
 
 ### 2025-06-01 14:00:00
 - feat: interactive UI elements in world space
+
+### 2025-06-23 14:00:00
+- docs: user guide for AR tour platform
