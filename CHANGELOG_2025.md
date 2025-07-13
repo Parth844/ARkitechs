@@ -17,3 +17,6 @@
 
 ### 2025-06-23 14:00:00
 - docs: user guide for AR tour platform
+
+### 2025-07-13 14:00:00
+- fix: resolved drift in world tracking
