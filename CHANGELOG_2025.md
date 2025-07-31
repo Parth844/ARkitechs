@@ -20,3 +20,6 @@
 
 ### 2025-07-13 14:00:00
 - fix: resolved drift in world tracking
+
+### 2025-07-31 14:00:00
+- feat: implemented 3D model hot-swapping
