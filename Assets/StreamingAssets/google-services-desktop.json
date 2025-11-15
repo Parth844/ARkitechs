@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "269838978671",
+    "firebase_url": "https://arkitechs-be2aa-default-rtdb.firebaseio.com",
+    "project_id": "arkitechs-be2aa",
+    "storage_bucket": "arkitechs-be2aa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269838978671:ios:9c8bc0aa2a5b93552b479a",
+        "android_client_info": {
+          "package_name": "com.arproject.sihbeta"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyCknLrDKM9YrRPYjcHz5OQBD71HgAMnoHU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269838978671-jsuug73t5aqimkobp71bppuqsmqjoupa.apps.googleusercontent.com"
+        }
+      ]
+    }
+  ],
+  "configuration_version": "1"
+}

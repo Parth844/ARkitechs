@@ -1,0 +1,29 @@
+[Libraries]
+[Libraries/**]
+
+# This is the correct Unity .gitignore
+[Libraries]
+
+# Ignore Unity-generated files
+[Libraries]
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+UserSettings/
+Logs/
+
+# Ignore RIDICULOUSLY large Unity package caches
+Library/PackageCache/
+
+# Ignore Crash Reports
+crashlytics-build.properties
+
+# Ignore Firebase large files
+Assets/Firebase/Plugins/**/FirebaseCppApp*
+*.dll
+*.dylib
+*.so
+
+# Ignore FBX files above 50MB manually (keep only important ones)

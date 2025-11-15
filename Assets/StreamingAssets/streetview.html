@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unity Street View</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <!-- 23-09-2025 AI-Tag -->
+    <!-- This was created with the help of Assistant, a Unity Artificial Intelligence product. -->
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map, #pano {
+        width: 100%;
+        height: 100%;
+      }
+      #pano {
+        display: none; /* Hide Street View initially */
+      }
+      #toggleBtn, #returnBtn {
+        position: absolute;
+        top: 10px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 9999;
+      }
+      #toggleBtn {
+        left: 10px;
+        background: #0078ff;
+        color: white;
+      }
+      #returnBtn {
+        right: 10px;
+        background: #ff4d4d;
+        color: white;
+      }
+    </style>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIYrNsEpkZo_JTU7OOOJUNxAzDM0_NzCY"></script>
+
+    <script>
+      let map, panorama;
+
+      function initMap() {
+        const tajMahal = { lat: 27.174238, lng: 78.0422317 };
+
+        // Map
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: tajMahal,
+          zoom: 14,
+        });
+
+        // Street View
+        panorama = new google.maps.StreetViewPanorama(
+          document.getElementById("pano"),
+          {
+            position: tajMahal,
+            pov: { heading: 34, pitch: 10 },
+            motionTracking: false,
+            motionTrackingControl: false,
+          }
+        );
+
+        map.setStreetView(panorama);
+
+        // Marker
+        const marker = new google.maps.Marker({
+          position: tajMahal,
+          map: map,
+          title: "Taj Mahal",
+        });
+
+        marker.addListener("click", () => {
+          panorama.setPosition(tajMahal);
+        });
+      }
+
+      // Toggle between Map and Street View
+      function toggleView() {
+        const mapDiv = document.getElementById("map");
+        const panoDiv = document.getElementById("pano");
+
+        if (panoDiv.style.display === "none") {
+          panoDiv.style.display = "block";
+          mapDiv.style.display = "none";
+        } else {
+          panoDiv.style.display = "none";
+          mapDiv.style.display = "block";
+        }
+      }
+
+      // Return to Unity
+      function returnToUnity() {
+        if (typeof Unity !== "undefined" && Unity.call) {
+          Unity.call("ReturnToScene");
+        }
+      }
+    </script>
+  </head>
+
+  <body onload="initMap()">
+    <button id="toggleBtn" onclick="toggleView()">Toggle View</button>
+    <button id="returnBtn" onclick="returnToUnity()">Return to Unity</button>
+    <div id="map"></div>
+    <div id="pano"></div>
+  </body>
+</html>

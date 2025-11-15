@@ -1,0 +1,30 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+
+# Package Cache (HUGE files)
+Library/PackageCache/
+
+# Firebase big files
+Assets/Firebase/Plugins/**/FirebaseCppApp*
+*.dll
+*.so
+*.bundle
+*.dylib
+
+# Ignore crash dumps
+*.blob
+mono_crash*
+
+# Project files that regenerate
+*.csproj
+*.sln
+*.user
+*.unitypackage
+.vs/
